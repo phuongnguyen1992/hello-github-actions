@@ -2,10 +2,14 @@ name: A workflow for my Hello World file
 on: push
 
 jobs:
+  # identifier
   build:
+    # job name
     name: Hello world action
     runs-on: ubuntu-latest
+    # linear sequence
     steps:
+      # use community action called checkout
       - uses: actions/checkout@v1
       - uses: ./action-a
         with:
